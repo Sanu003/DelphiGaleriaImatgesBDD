@@ -773,19 +773,14 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 var
 SQLConnection: TSQLConnection;
-PassHeader,PassValue:String;
 begin
-//Lo hago asi para que pueda hacer commit en GitHub
-//son mis credenciales locales asi que me da igual hacer commit
-  PassHeader:='Password';
-  PassValue:= 'AVNS_ZZhsXBUxSadki9ujweq';
   ID:=0;
   ScrollBox1.OnMouseWheel := ScrollBox1MouseWheel;
   SQLConnection := TSQLConnection.Create(nil);
   SQLConnection.DriverName := 'MySQL';
   SQLConnection.Params.Values['Database'] := 'guardarimatges';
   SQLConnection.Params.Values['User_Name'] := 'avnadmin';
-  SQLConnection.Params.Values[PassHeader] := PassValue;
+  SQLConnection.Params.Values['Password'] := 'AVNS_ZZhsXBUxSadki9ujweq';
   SQLConnection.Params.Values['Port'] := '25063'; // Puerto típico de MySQL, ajusta si es necesario
   SQLConnection.LibraryName := 'dbxmys.dll';
   SQLConnection.VendorLib := 'libmysql.dll';
