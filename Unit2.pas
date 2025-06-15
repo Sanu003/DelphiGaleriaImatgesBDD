@@ -640,6 +640,21 @@ begin
   DBLinies.SQL.Add('delete from imatges');
   DBLinies.SQL.Add('where height is NULL');
   DBLinies.ExecSQL;
+
+  DBLinies.SQL.Clear;
+  DBLinies.SQL.Add('delete from imatges2');
+  DBLinies.SQL.Add('where height is NULL');
+  DBLinies.ExecSQL;
+
+  DBLinies.SQL.Clear;
+  DBLinies.SQL.Add('delete from comic_imatges');
+  DBLinies.SQL.Add('where height is NULL');
+  DBLinies.ExecSQL;
+
+  DBLinies.SQL.Clear;
+  DBLinies.SQL.Add('delete from comic_portada');
+  DBLinies.SQL.Add('where height is NULL');
+  DBLinies.ExecSQL;
 end;
 
 procedure TForm2.ShowImageForm(const ImagePath: string);

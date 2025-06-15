@@ -1,0 +1,57 @@
+Tablas en la base de datos que necesitaras 
+
+CREATE TABLE `comic_imatges` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nom` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`contingut` LONGBLOB NULL DEFAULT NULL,
+	`codi_comic` VARCHAR(500) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`height` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `Índice 1` (`id`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=768
+;
+
+CREATE TABLE `comic_portada` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nom` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`contingut` LONGBLOB NULL DEFAULT NULL,
+	`codi_comic` VARCHAR(500) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`height` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `Índice 1` (`id`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=710
+;
+
+CREATE TABLE `imatges` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nom` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`contingut` LONGBLOB NULL DEFAULT NULL,
+	`url` VARCHAR(500) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`height` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `Índice 1` (`id`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=1619
+;
+
+CREATE TABLE `imatges2` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`nom` VARCHAR(50) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`contingut` LONGBLOB NULL DEFAULT NULL,
+	`url` VARCHAR(500) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`height` INT(11) NULL DEFAULT NULL,
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `Índice 1` (`id`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=672
+;
